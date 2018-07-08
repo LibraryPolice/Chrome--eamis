@@ -1,0 +1,20 @@
+{
+"manifest_version": 2,
+"name": "GPA",
+"description": "Get your GAP from eamis.nankai.edu.cn",
+"version": "1.0",
+"browser_action": {
+	"default_icon": "icon.png",
+	"default_title": "新鲜出炉的学分绩"
+},
+"permissions": [
+	"tabs", "http://*/*","https://*/*"
+],
+"content_scripts":[
+	{
+		"matches":["http://eamis.nankai.edu.cn/eams/*"],
+		"js":["myscript.js"]
+	}
+]
+
+}
